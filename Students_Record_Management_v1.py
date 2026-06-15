@@ -40,11 +40,24 @@ def search_student(students):
             print("Student Record Not Found.")
 
 
+def top_student(students):
+    max_grades = 0
+    for student in students:
+        if student["grades"] > max_grades:
+
+            name = student["name"]
+            age = student["age"]
+            max_grades = student["grades"]
+
+    print(f" {name} - {age} - {grades}")
+
+
 while True:
     print("--- Student Record Management ---")
     print("1. Add Student Record.")
     print("2. View All Students Record.")
     print("3. Search for a Student record.")
+    print("4. Show Top Student.")
     print("0. Exit System.")
 
     choice = int(input("Enter Number(0 - 5): "))
@@ -58,6 +71,9 @@ while True:
 
         case 3:
             search_student(students)
+
+        case 4:
+            top_student(students)
 
         case 0:
             break
