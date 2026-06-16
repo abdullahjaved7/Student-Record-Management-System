@@ -20,6 +20,9 @@ def add_student(students):
 
 
 def view_students(students):
+    if not students:
+        print("Student Record is Empty.")
+        return
 
     count = 1
     print("  | Name    | Age | Grades |")
@@ -30,29 +33,41 @@ def view_students(students):
 
 
 def search_student(students):
+    if not students:
+        print("Student Record is Empty.")
+        return
     s_name = input("Enter Student Name: ")
+    found = False
     for s in students:
         if s["name"] == s_name:
             print("STUDENT RECORD:")
             print(f" {s['name']} - {s['age']} - {s['grades']}")
+            found = True
             break
-        else:
-            print("Student Record Not Found.")
+
+    if found == False:
+        print("Student Record Not Found.")
 
 
 def top_student(students):
-    max_grades = 0
+    if not students:
+        print("Student Record is Empty.")
+        return
+
+    top = students[0]
     for student in students:
-        if student["grades"] > max_grades:
+        if student["grades"] > top["grades"]:
 
-            name = student["name"]
-            age = student["age"]
-            max_grades = student["grades"]
+            top = student
 
-    print(f" {name} - {age} - {max_grades}")
+    print(f"{student['name']} - {student['age']} - {student['grades']}")
 
 
 def average_grades(students):
+    if not students:
+        print("Student Record is Empty.")
+        return
+
     grades_sum = 0
     count = 0
     for student in students:
