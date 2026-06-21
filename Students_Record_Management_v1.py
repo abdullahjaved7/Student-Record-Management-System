@@ -45,7 +45,7 @@ def search_student(students):
             found = True
             break
 
-    if found == False:
+    if not found:
         print("Student Record Not Found.")
 
 
@@ -60,7 +60,7 @@ def top_student(students):
 
             top = student
 
-    print(f"{student['name']} - {student['age']} - {student['grades']}")
+    print(f"{top['name']} - {top['age']} - {top['grades']}")
 
 
 def average_grades(students):
@@ -77,6 +77,39 @@ def average_grades(students):
 
     avg_grades = grades_sum / count
     print(f"Average grades: {avg_grades:.2f}")
+
+
+def save_data(students):
+    file = open("record.txt", "w")
+
+    for student in students:
+        line = f"{student['name']},{student['age']},{student['grades']}"
+        file.write(line)
+        file.write("\n")
+
+    file.close()
+
+
+def load_data(students):
+    try:
+        file = open("record.txt", "r")
+
+        for line in file:
+            line = line.strip()
+            parts = line.split(",")
+            student = {
+                "name": parts[0],
+                "age": int(parts[1]),
+                "grades": float(parts[2])
+            }
+            students.append(student)
+        print("File loaded successfully :)")
+        file.close()
+    except FileNotFoundError:
+        print("No saved records found. Starting with an empty database.")
+
+
+load_data(students)
 
 
 while True:
@@ -107,6 +140,7 @@ while True:
             average_grades(students)
 
         case 0:
+            save_data(students)
             break
 
         case _:
