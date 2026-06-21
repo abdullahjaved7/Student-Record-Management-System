@@ -2,7 +2,7 @@
 
 A console-based Student Record Management System built with Python.
 
-This application allows users to manage student records through a menu-driven interface. Records can be added, viewed, searched, analyzed, saved, and automatically loaded when the application starts.
+This project allows users to manage student records through an interactive menu-driven interface. Users can add, view, search, and analyze student records, while data is automatically saved and loaded between program sessions.
 
 ## Features
 
@@ -16,8 +16,8 @@ This application allows users to manage student records through a menu-driven in
 
 ### Data Persistence
 
-* Save records to a file
-* Automatically load records on startup
+* Save student records to a file
+* Automatically load records when the application starts
 * Maintain data between program sessions
 
 ### Error Handling
@@ -35,7 +35,8 @@ This application allows users to manage student records through a menu-driven in
 * Match Case Statements
 * File Handling
 * Exception Handling
-* Git & GitHub
+* Git
+* GitHub
 
 ## Project Structure
 
@@ -43,11 +44,15 @@ This application allows users to manage student records through a menu-driven in
 Student_Record_System/
 │
 ├── main.py
-├── record.txt
 ├── README.md
+├── .gitignore
 ```
 
-## How to Run
+## Requirements
+
+* Python 3.10 or higher
+
+## Installation
 
 ### Clone the Repository
 
@@ -55,13 +60,13 @@ Student_Record_System/
 git clone <repository-url>
 ```
 
-### Navigate to Project Folder
+### Navigate to the Project Folder
 
 ```bash
 cd Student_Record_System
 ```
 
-### Run the Program
+### Run the Application
 
 ```bash
 python main.py
@@ -73,8 +78,8 @@ python main.py
 --- Student Record Management ---
 
 1. Add Student Record
-2. View All Students Record
-3. Search for a Student Record
+2. View All Student Records
+3. Search Student Record
 4. Show Top Student
 5. Show Average Grades
 0. Exit System
@@ -88,23 +93,33 @@ python main.py
 * View student records
 * Search student records
 * Calculate average grades
-* Show top student
+* Display top student
 
 ### v0.2.0
 
-* File persistence
-* Automatic record loading
+* Added file persistence
+* Added automatic record loading
 * Improved empty record handling
-* Better top student logic
-* Data saved between program sessions
+* Improved top student calculation
+* Data is now saved between sessions
 
-## Future Improvements (v0.3.0)
+## Roadmap
+
+### v0.3.0
 
 * Input validation using try/except
 * Edit student records
 * Delete student records
-* Improved user interface
-* Export student data
+
+### v0.4.0
+
+* Save data using JSON
+* Enhanced search functionality
+* Improved user experience
+
+### v0.5.0
+
+* Graphical User Interface (GUI)
 * Database integration
 
 ## Learning Outcomes
@@ -113,15 +128,18 @@ This project helped me practice:
 
 * Python Fundamentals
 * Functions
-* Lists & Dictionaries
+* Lists and Dictionaries
 * File Handling
 * Exception Handling
 * Problem Solving
-* Git & GitHub Workflow
+* Git Workflow
+* GitHub Workflow
 
 ## Author
 
-Abdullah Javed
-eduabdullah7@gmail.com
+**Abdullah Javed**
 
-Bachelor's Student in Computer Science | Aspiring Software Developer
+Bachelor's Student in Computer Science
+Aspiring Software Developer | AI Automation Engineer
+
+Email: [eduabdullah7@gmail.com]
